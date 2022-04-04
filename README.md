@@ -73,8 +73,26 @@ information about the  **client personal information**:
 	1.  `default_payment_next_month`: indicate whether the credit card holders are default or not-default (1=yes, 0=no)
 
 ## EDA
-1. Label default_payment_next_month is not balance
+1. Label default_payment_next_month is not balance.
+
 ![Imbalance of Label](https://github.com/ulvadewiyanti/classification-model-for-predict-credit-card-default-payment/blob/main/images/Imbalance%20label.png)
+
+2. Around 61% of customers are women, but based on the graph below, it appears that men have a slightly higher chance of default, which is 24% compared to women who are only 21%.
+
+![Sex vs Default](https://github.com/ulvadewiyanti/classification-model-for-predict-credit-card-default-payment/blob/main/images/Sex%20Barplot.png)
+
+3. Education level is dominated by University, followed by Postgraduate, High School, Unknown and Others. If we look at the first 3 categories in the graph (postgraduate, university, and high school), it appears that the higher the education of the customers, the lower the chance of default, this may be due to a better understanding of financial planning along with the increase in the education level of the customers. However, the Unknown and Other categories have a much lower probability of default than the other three categories, but for these two categories it cannot be determined whether they are higher than postgraduate or lower than high school education.
+
+![Education vs Default](https://github.com/ulvadewiyanti/classification-model-for-predict-credit-card-default-payment/blob/main/images/Education%20Barplot.png)
+
+
+4. Most of the customers came from the Married and Single categories. Meanwhile, customers who have divorced marital status have a greater chance of default than other categories, followed by married status, and then single.
+
+![Marriage vs Default](https://github.com/ulvadewiyanti/classification-model-for-predict-credit-card-default-payment/blob/main/images/Marriage%20Barplot.png)
+
+5. customers are dominated by ages between 25 to 40 years, based on the graph above, it can also be seen that the highest defaults are in the elderly, namely the highest default in the age range of 70-79 years, followed by 60-69 years, then 50-59 years.
+
+![Age vs Default](https://github.com/ulvadewiyanti/classification-model-for-predict-credit-card-default-payment/blob/main/images/Age%20Barplot.png)
 
 ## ML Modeling & Evaluation
 Before doing the modeling, data preprocessing is carried out as follows,
@@ -122,3 +140,12 @@ Here are the top 4 model,
 The best model is **XGBoost** and has been oversampled, where the model has the highest AUC and Recall values.
 
 ## Business Insight & Recomendations
+1. Default customer has a low buying power, default customers can be given offers in the form of change the payment schedule such as changing credit terms or change the financing structure such as bill size, loan interest, limit balance, etc.
+
+![Low Buying Power](https://github.com/ulvadewiyanti/classification-model-for-predict-credit-card-default-payment/blob/main/images/Low%20Buying%20Power.png)
+
+2. Based on the feature importance model, the customer default mitigation process can be started from customers who have a late payment status for 2 months in the last previous month.
+
+![Feature Importances](https://github.com/ulvadewiyanti/classification-model-for-predict-credit-card-default-payment/blob/main/images/Feature%20Importances.png)
+
+3. Requirements for customer acceptance of credit card users are more stringent, which takes into account financial knowledge, age, and others.
