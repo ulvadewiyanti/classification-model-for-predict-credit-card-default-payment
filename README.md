@@ -70,9 +70,11 @@ information about the  **client personal information**:
 	5.  `BILL_AMT5`: Amount of bill statement in May, 2005 (NT dollar)
 	6.  `BILL_AMT6`: Amount of bill statement in April, 2005 (NT dollar)
  -  target variable:
-	1.  `default.payment.next.month`: indicate whether the credit card holders are default or not-default (1=yes, 0=no)
+	1.  `default_payment_next_month`: indicate whether the credit card holders are default or not-default (1=yes, 0=no)
 
 ## EDA
+1. Label default_payment_next_month is not balance
+![Imbalance of Label](https://github.com/ulvadewiyanti/classification-model-for-predict-credit-card-default-payment/blob/main/images/Imbalance%20label.png)
 
 ## ML Modeling & Evaluation
 Before doing the modeling, data preprocessing is carried out as follows,
